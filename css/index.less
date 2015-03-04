@@ -1,0 +1,466 @@
+/*
+  css Reset Stylesheet
+*/
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, b, i,
+dl, dt, dd, ol, ul, li,
+form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+footer, header {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+body {
+  font-size: 14px;
+  line-height:1;
+  background: @body-color;
+  font-family: "YouYuan","Hiragino Sans GB","Microsoft YaHei";
+}
+li{
+  list-style: none;
+}
+a {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  text-decoration: none;
+}
+@font-face {font-family: 'iconfont';
+  src: url('iconfont/iconfont.eot'); /* IE9*/
+  src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('iconfont/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:10px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;}
+/*
+  预定义的样式变量
+*/
+@nav-bg: #e9eaec;
+@font-blue: #028c7f;
+@body-color: #f5f5f5;
+@font-You: "幼圆";
+@font-Song: "SimSun";
+@font-gray: #545454;
+@main-width: 1002px;
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.ilb{
+  display: inline-block;
+}
+.divCenter(@top:0){
+  width: @main-width;
+  margin: @top auto;
+}
+.nav-boder{
+  border-bottom: 1px solid #e3e3e3;
+  box-shadow: 0 1px 1px #efefef;
+}
+/*-----------------------------------
+  header顶端的样式
+-----------------------------------*/
+
+#header{
+  width: 100%;
+  background: @nav-bg;
+}
+#site-nav{
+  .divCenter;
+  .nav-boder;
+  font-family: @font-Song;
+}
+#site-nav p{
+  .fl;
+  padding: 10px 0;
+}
+#site-nav p,#site-nav p a{
+  color: @font-gray;
+}
+#site-nav ul{
+  .fr;
+}
+#site-nav ul li{
+  .fl;
+  padding: 10px 18px;
+}
+#site-nav ul li a{
+  color: @font-gray;
+}
+.iconfont{
+  position: relative;
+  top: -1px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+/*-----------------------------------
+  logo和搜索的样式
+-----------------------------------*/
+.logo{
+  background: @body-color;
+  height: 120px;
+}
+.logo-inside{
+  .divCenter;
+}
+.logo-inside img{
+  .fl;
+}
+.logo-inside form{
+  .fr;
+  margin-top: 10px;
+}
+#form-search{
+  font-size: 14px;
+  padding: 13px 7px;
+  width: 448px;
+  border: 1px solid #bababa;
+}
+#form-submit{
+  border: 1px solid #00796e;
+  padding: 10px 26px;
+  position: relative;
+  top: 17px;
+  left: -4px;
+  background: @font-blue;
+}
+/*-----------------------------------
+  主导航的样式
+-----------------------------------*/
+.main-nav{
+  text-align: center;
+}
+.main-nav li{
+  display: inline-block;
+  font-size: 18px;
+}
+.main-nav li a{
+  display: inline-block;
+  color: @font-blue;
+  font-weight: bold;
+  padding: 22px 12px 19px 12px;
+  border-bottom: 3px solid @nav-bg;
+}
+.main-nav li a:hover{
+  border-bottom: 3px solid @font-blue;
+}
+/*-----------------------------------
+  页面主体样式
+-----------------------------------*/
+.down(@pt: 18px,@pr: 8px,@pd:18px,@pl:8px,@fs:18px){
+  display: block;
+  width: 100%;
+  padding: @pt @pr @pd @pl;
+  font-size: @fs;
+  color: @main-white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+//-----------unslider-------------------
+#main{
+  .divCenter;
+}
+.img-slider{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.banner { position: relative; overflow: auto; }
+.banner ul{
+  height: 350px;
+}
+.banner ul li { float: left; }
+.banner .dots {
+  position: absolute;
+  display: inline-block;
+  left: 45%;
+  right: 0;
+  bottom: 0px;
+}
+.banner .dots li.active {
+  background: #028c7f;
+  opacity: 1;
+}
+.banner .dots li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  text-indent: -999em;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: .4;
+  background: #aeaeae;
+  -webkit-transition: background .5s, opacity .5s;
+  -moz-transition: background .5s, opacity .5s;
+  transition: background .5s, opacity .5s;
+}
+//-----------discount-------------------
+@main-white: #fff;
+.main-div{
+  background: @main-white;
+  padding: 26px 24px;
+  margin-top: 34px;
+  overflow: hidden;
+}
+.main-div h1{
+  font-size: 24px;
+  color: #ea5234;
+  font-weight: normal;
+  border-bottom: 1px dotted #bfbfbf;
+  padding: 0 0 8px 0;
+  margin-bottom: 26px;
+}
+.new-list ul li{
+  .fl;
+  margin-left: 24px;
+}
+.new-list ul li:first-child{
+  margin-left: 0;
+}
+.news-img{
+  width: 220px;
+  height: 290px;
+  overflow: hidden;
+  position: relative;
+}
+.news-down{
+  .down;
+  background: #000;
+  background: rgba(0,0,0,0.5);
+}
+.like{
+  .ilb;
+  margin-top: 14px;
+  color: #787878;
+  font-family: @font-Song;
+}
+.like img{
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.details{
+  .fr;
+  padding: 6px 8px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-top: 4px;
+  background: #028c7f;
+  color: #fff;
+  font-family: @font-Song;
+}
+//-----------welcome-left-------------------
+.welcome{
+  overflow: hidden;
+}
+.welcome-left{
+  .fl;
+  width: 706px;
+  overflow: hidden;
+}
+.welcome-left ul,.welcome-left ol{
+  overflow: hidden;
+  margin-left: 23px;
+}
+.welcome-left ol{
+  .fl;
+}
+.welcome-left ul li{
+  .fl;
+  margin-left: 23px;
+}
+.welcome-left ol li{
+  .fl;
+  margin-left: 10px;
+}
+.welcome-left .first-child{
+  margin-left: 0;
+}
+.welcome-2(@width,@height){
+  display: inline-block;
+  position: relative;
+  width: @width;
+  height: @height;
+  overflow: hidden;
+}
+.welcome-img{
+  .welcome-2(220px,290px);
+}
+.welcome-img img.img-big{
+  width: 220px;
+}
+.welcome-down{
+  .down(14px,12px,10px,12px,18px);
+  background: #028c7f;
+}
+.welcome-down img{
+  vertical-align: middle;
+  position: relative;
+  top: -4px;
+  margin-right: 10px;
+}
+.welcome-small{
+  .welcome-2(105px,105px);
+  margin-top: 12px;
+}
+.welcome-small img{
+  width: 105px;
+}
+.small-down{
+  .down(6px,14px,6px,19px);
+  background: #000;
+  background: rgba(0,0,0,0.5);
+}
+//-----------welcome-right-------------------
+.welcome-right{
+  .fr;
+  width: 222px;
+  overflow: hidden;
+}
+.welcome-right ul{
+  font-family: @font-Song;
+  font-size: 14px;
+  border-collapse: collapse;
+  width: 100%;
+}
+.welcome-right ul li{
+  background: #ececec;
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 12px;
+}
+.welcome-right ul li a{
+  color: #434343;
+}
+.welcome-right ul li span{
+  .ilb;
+  width: 20px;
+  text-align: center;
+}
+.welcome-right ul li i{
+  .ilb;
+  font-style: normal;
+  font-size: 12px;
+  color: #fff;
+  background: #ee684d;
+  padding: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
+}
+.rank{
+  width: 20px;
+  text-align: center;
+  color: #989898;
+}
+.wel-1{
+  color: #ff2a00;
+}
+.wel-2{
+  color: #ff7e00;
+}
+.wel-3{
+  color: #ffbb05;
+}
+//-----------DIY-------------------
+.main-diy h1{
+  margin-bottom: 0;
+}
+.diy{
+  .fl;
+  font-family: @font-Song;
+  width: 475px;
+  margin-top: 20px;
+}
+.diy-img{
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  .fl;
+}
+.diy-img img{
+  width: 120px;
+}
+.diy-detail{
+  .fl;
+  width: 330px;
+  height: 120px;
+  margin-left: 16px;
+}
+.diy-detail h2{
+  font-size: 14px;
+  color: #606060;
+}
+.diy-detail p{
+  margin-top: 8px;
+  color: #5d5d5d;
+  line-height: 24px;
+  height: 78px;
+  margin-right: 14px;
+}
+.user{
+  background: url("../image/user-img.png") no-repeat 0 1px;
+}
+.diy-detail span{
+  position: relative;
+  bottom: 0;
+}
+.diy-left{
+  .fl;
+  color: #9e9e9e;
+  padding-left: 16px;
+}
+.diy-right{
+  .fr;
+  color: #9e9e9e;
+  margin-right: 14px;
+}
+.diy-right a{
+  color: #9e9e9e;
+}
+/*-----------------------------------
+  header顶端的样式
+-----------------------------------*/
+#footer{
+  margin-top: 94px;
+  background: url("../image/footer-bg.png");
+  padding: 66px 0 82px 0;
+  text-align: center;
+  font-family: @font-Song;
+}
+#footer img{
+  margin: 0 22px;
+}
+#footer p{
+  color: #fff;
+}
+#footer a{
+  display: inline-block;
+  margin-top: 24px;
+  color: #fff;
+}
